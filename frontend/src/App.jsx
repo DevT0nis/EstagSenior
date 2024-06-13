@@ -26,9 +26,9 @@ const CanvasContainer = styled.div`
 function App() {
   return (
     <Container>
-      <HomeAiContainer>
+      {/* <HomeAiContainer>
         <HomeAi />
-      </HomeAiContainer>
+      </HomeAiContainer> */}
       <CanvasContainer>
         <Canvas shadows camera={{ position: [0, 2, 5], fov: 30 }}>
           <color attach="background" args={["#ececec"]} />
