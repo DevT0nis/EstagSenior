@@ -27,7 +27,7 @@ export function Avatar(props) {
     "animations/Falling Idle.fbx"
   );
 
-  typingAnimation[0].name = "Typing";
+  typingAnimation[0].name = "Trabalhando";
   standingAnimation[0].name = "Standing";
   fallingAnimation[0].name = "Falling";
   talkingAnimation[0].name = "Talking";
