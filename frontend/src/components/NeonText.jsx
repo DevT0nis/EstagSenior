@@ -12,8 +12,8 @@ const NeonText = ({ text, position, color, fontSize, neonColor }) => {
   // Animação de pulsação usando useFrame
   useFrame(({ clock }) => {
     if (isPulsing) {
-      const scale = 1 + 0.1 * Math.sin(clock.getElapsedTime() * 1.7); // Ajuste a velocidade e intensidade da pulsação aqui
-      textRef.current.scale.set(scale, scale, scale);
+      const scale = 0.5 + 0.1 * Math.sin(clock.getElapsedTime() * 2); // Ajuste a velocidade e intensidade da pulsação aqui
+      textRef.current.scale.set(scale, scale);
     }
   });
 
@@ -26,7 +26,7 @@ const NeonText = ({ text, position, color, fontSize, neonColor }) => {
         fontSize={fontSize}
         side={THREE.FrontSide} // 
         color={neonColor}
-        position={[0, 0, 0]}
+        position={[-0.1, 0, 0]}
       >
         {text}
       </Text>
