@@ -9,6 +9,7 @@ import { useFrame, useLoader } from "@react-three/fiber";
 
 
 
+
 // todo: verificar se existe alguma lib para convertes os arquivos com defeito para que a pagina carregue normalmente
 
 export const Experience = () => {
@@ -44,8 +45,8 @@ export const Experience = () => {
   const controle = useGLTF('./models/playstation_5_dualsense.glb', true);
   const livros = useGLTF('./models/books_collection.glb', true);
 
-  const window = useGLTF('./models/window.glb', true);
-  
+  const window = useGLTF('./models/window-v1 (1).glb', true);
+
   const woodTexture = useLoader(THREE.TextureLoader, './textures/Wood084A_2K-JPG_Color.jpg');
 
   const catRef = useRef();
