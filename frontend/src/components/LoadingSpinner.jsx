@@ -8,31 +8,22 @@ const spin = keyframes`
 
 const Container = styled.div`
 display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+
+
+
+
 
 `;
 
-const Spinner = styled.div`
-  border: 8px solid rgba(12, 231, 220, 0.871);
-  border-top: 8px solid #d818d8;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: ${spin} 1s linear infinite;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
+
 
 const Text = styled.div`
    text-align: center;
   color: #f3fff0;
-  font-size: 50px;
+  
+  font-size: 100px;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   font-style: normal;
   position: absolute;
   top: 40%;
@@ -42,9 +33,22 @@ const Text = styled.div`
 
 `;
 
+const Spinner = styled.div`
+  border: 15px solid rgba(55, 255, 0, 0.871);
+  border-top: 15px solid #d818d8;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: ${spin} 1s linear infinite;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
 const LoadingSpinner = () => {
   const [text, setText] = useState("");
-  const loadingText = " Carregando...";
+  const loadingText = "  Carregando...";
   const interval = 250; 
 
   useEffect(() => {
@@ -66,8 +70,9 @@ const LoadingSpinner = () => {
   return (
     
     <Container>
-      <Spinner />
       <Text>{text}</Text>
+      <Spinner />
+    
       </Container>
  
   );
